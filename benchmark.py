@@ -114,11 +114,12 @@ def main():
     for i in range(start, end):
         generate_circuit(i, args.nargo)
 
+        print(f"Fibonacci size: 2^{i}")
         witness_time = generate_witness(i, args.nargo)
-        print(f"Witness generation time for 2^{i}: {witness_time} ms")
+        print(f"Witness generation time: {witness_time} ms")
 
         proof_time = generate_proof(i, args.nargo)
-        print(f"Proof generation time for 2^{i}: {proof_time} ms")
+        print(f"Proof generation time:   {proof_time} ms")
 
 if __name__ == "__main__":
     main()
